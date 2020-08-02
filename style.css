@@ -24,11 +24,21 @@
   position: absolute;
   bottom: 0;
   max-width: 100%;
-  animation: animate 8s linear infinite;
-
+  /* animation: animate 8s linear infinite; */
+  animation: animate calc(8s * var(--i)) linear infinite;
 }
 
+@keyframes animate {
+  0%
+  {
+    transform: translateX(-100%);
+  }
+  100%
+  {
+    transform: translateX(100%);
+  }
 
+}
 section{
   position: relative;
   padding: 75px 100px;
